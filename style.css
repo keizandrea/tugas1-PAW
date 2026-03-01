@@ -1,0 +1,66 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Quicksand:wght@400;700&display=swap');
+
+:root {
+    --vtg-orange: #E67E5E;
+    --vtg-cream: #FDF6E9;  
+    --vtg-dark: #2D2424;   
+    --vtg-yellow: #F4D35E; 
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--vtg-cream);
+    color: var(--vtg-dark);
+}
+
+.font-serif {
+    font-family: 'DM+Serif+Display', serif;
+}
+
+.lonjong-card {
+    background-color: white;
+    border: 3px solid var(--vtg-dark);
+    
+    border-radius: 4.5rem; 
+    padding: 3.5rem 2.5rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.lonjong-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 15px 15px 0px var(--vtg-orange);
+}
+
+/* Tombol Lonjong */
+.btn-pill {
+    background-color: var(--vtg-orange);
+    color: white;
+    border: 2px solid var(--vtg-dark);
+    border-radius: 999px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    padding: 0.8rem 2.5rem;
+    transition: all 0.2s ease;
+}
+
+.btn-pill:hover {
+    background-color: var(--vtg-yellow);
+    color: var(--vtg-dark);
+}
+
+.orange-bg {
+    background-color: var(--vtg-orange) !important;
+}
+
+.text-white {
+    color: var(--vtg-cream) !important;
+}
+
