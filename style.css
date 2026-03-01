@@ -1,4 +1,3 @@
-/* style.css */
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Quicksand:wght@400;700&display=swap');
 
 :root {
@@ -13,23 +12,20 @@ body {
     background-color: var(--vtg-cream);
     color: var(--vtg-dark);
     margin: 0;
-    overflow-x: hidden; /* Mencegah scroll horizontal */
+    overflow-x: hidden;
 }
 
 .font-serif {
     font-family: 'DM+Serif+Display', serif;
 }
 
-/* --- Section Putih/Krem Utama --- */
 main {
     padding-bottom: 100px;
 }
-/* style.css */
 
-/* --- Container Utama Kartu --- */
 .lonjong-card {
-    background-color: #FDF6E9 !important; /* Warna krem solid agar shadow tidak tembus */
-    border-radius: 5rem;     /* Membuat bentuk lonjong sempurna */
+    background-color: #FDF6E9 !important;
+    border-radius: 5rem;
     padding: 3.5rem 2.5rem;
     display: flex;
     flex-direction: column;
@@ -38,11 +34,10 @@ main {
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: none !important;
     position: relative;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Shadow halus saat diam */
-    min-height: 500px; /* Memastikan tinggi kartu konsisten */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    min-height: 500px;
 }
 
-/* Efek Shadow Oren yang rapi di belakang (seperti di image_a11438.png) */
 .lonjong-card:hover {
     transform: translateY(-10px);
     box-shadow: 15px 15px 0px var(--vtg-orange) !important; 
@@ -69,9 +64,11 @@ main {
     font-size: 0.7rem;
     letter-spacing: 0.2em;
     display: inline-block;
-    margin-top: auto;     transition: 0.3s;
+    margin-top: auto;
+    transition: 0.3s;
     text-decoration: none;
 }
+
 .hover-3d {
     position: relative;
     display: grid;
@@ -119,7 +116,11 @@ main {
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    padding: 120px 0; /* Ruang vertikal */
+    padding: 120px 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 }
 
 .orange-section h2, 
@@ -131,20 +132,8 @@ main {
 .orange-text { color: var(--vtg-orange) !important; }
 .orange-bg { background-color: var(--vtg-orange) !important; }
 
-
 .chat-bubble {
     border: 1px solid rgba(255, 255, 255, 0.05); 
-}
-
-.orange-section {
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-}
-
-
-.chat-bubble {
     border-radius: 2rem !important; 
     padding: 1rem 1.5rem !important;
 }
