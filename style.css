@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Quicksand:wght@400;700&display=swap');
 
 :root {
-    --vtg-orange: #E67E5E;
+    --vtg-orange: #E67E5E; 
     --vtg-cream: #FDF6E9;  
     --vtg-dark: #2D2424;   
     --vtg-yellow: #F4D35E; 
@@ -12,55 +12,144 @@ body {
     font-family: 'Quicksand', sans-serif;
     background-color: var(--vtg-cream);
     color: var(--vtg-dark);
+    margin: 0;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
 }
 
 .font-serif {
     font-family: 'DM+Serif+Display', serif;
 }
 
+/* --- Section Putih/Krem Utama --- */
+main {
+    padding-bottom: 100px;
+}
+/* style.css */
+
+/* --- Container Utama Kartu --- */
 .lonjong-card {
-    background-color: white;
-    border: 3px solid var(--vtg-dark);
-    
-    border-radius: 4.5rem; 
+    background-color: #FDF6E9 !important; /* Warna krem solid agar shadow tidak tembus */
+    border-radius: 5rem;     /* Membuat bentuk lonjong sempurna */
     padding: 3.5rem 2.5rem;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: none !important;
     position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Shadow halus saat diam */
+    min-height: 500px; /* Memastikan tinggi kartu konsisten */
 }
 
+/* Efek Shadow Oren yang rapi di belakang (seperti di image_a11438.png) */
 .lonjong-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 15px 15px 0px var(--vtg-orange);
+    transform: translateY(-10px);
+    box-shadow: 15px 15px 0px var(--vtg-orange) !important; 
 }
 
-/* Tombol Lonjong */
-.btn-pill {
-    background-color: var(--vtg-orange);
-    color: white;
-    border: 2px solid var(--vtg-dark);
+.icon-circle {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 999px;
+    margin-bottom: 2.5rem;
+    font-size: 3rem;
+}
+
+.btn-pill {
+    background-color: var(--vtg-orange) !important;
+    color: white !important;
+    border-radius: 999px !important;
+    padding: 1rem 2.5rem;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 0.7rem;
     letter-spacing: 0.2em;
-    padding: 0.8rem 2.5rem;
-    transition: all 0.2s ease;
+    display: inline-block;
+    margin-top: auto;     transition: 0.3s;
+    text-decoration: none;
+}
+.hover-3d {
+    position: relative;
+    display: grid;
+    perspective: 1000px;
+    width: 100%;
+    max-width: 500px;
 }
 
-.btn-pill:hover {
-    background-color: var(--vtg-yellow);
-    color: var(--vtg-dark);
+.hover-3d div {
+    grid-area: 1 / 1;
+    z-index: 10; 
+    width: 100%;
+    height: 100%;
 }
 
-.orange-bg {
-    background-color: var(--vtg-orange) !important;
+.hover-3d figure {
+    grid-area: 1 / 1;
+    z-index: 1;
+    pointer-events: none;
+    background: transparent !important;
+    margin: 0;
+    transition: transform 0.4s ease;
 }
 
-.text-white {
-    color: var(--vtg-cream) !important;
+.hover-3d img {
+    filter: drop-shadow(20px 20px 30px rgba(230, 126, 94, 0.25)); 
+    width: 100%;
+    height: auto;
 }
 
+.hover-3d div:nth-child(1):hover ~ figure { transform: rotateX(15deg) rotateY(-15deg); }
+.hover-3d div:nth-child(2):hover ~ figure { transform: rotateX(15deg) rotateY(0deg); }
+.hover-3d div:nth-child(3):hover ~ figure { transform: rotateX(15deg) rotateY(15deg); }
+.hover-3d div:nth-child(4):hover ~ figure { transform: rotateX(0deg) rotateY(-15deg); }
+.hover-3d div:nth-child(5):hover ~ figure { transform: rotateX(0deg) rotateY(15deg); }
+.hover-3d div:nth-child(6):hover ~ figure { transform: rotateX(-15deg) rotateY(-15deg); }
+.hover-3d div:nth-child(7):hover ~ figure { transform: rotateX(-15deg) rotateY(0deg); }
+.hover-3d div:nth-child(8):hover ~ figure { transform: rotateX(-15deg) rotateY(15deg); }
+
+.orange-section {
+    background-color: var(--vtg-orange);
+    width: 100vw; 
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 120px 0; /* Ruang vertikal */
+}
+
+.orange-section h2, 
+.orange-section p,
+.orange-section h4 {
+    color: white !important;
+}
+
+.orange-text { color: var(--vtg-orange) !important; }
+.orange-bg { background-color: var(--vtg-orange) !important; }
+
+
+.chat-bubble {
+    border: 1px solid rgba(255, 255, 255, 0.05); 
+}
+
+.orange-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.chat-bubble {
+    border-radius: 2rem !important; 
+    padding: 1rem 1.5rem !important;
+}
+
+.chat-start .chat-bubble::before,
+.chat-end .chat-bubble::before {
+    display: none !important;
+}

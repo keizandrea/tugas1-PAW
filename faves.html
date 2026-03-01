@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,49 +9,65 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="p-8 md:p-20">
 
-    <header class="max-w-6xl mx-auto mb-20 flex flex-col md:flex-row justify-between items-end gap-6">
-        <div>
-            <a href="index.html" class="font-bold text-xs uppercase tracking-widest hover:underline">&larr; Back Home</a>
-            <h2 class="font-serif text-6xl mt-6 uppercase tracking-tighter">My <span class="text-[#E67E5E]">Daily Joy</span></h2>
+<body class="m-0 p-0"> <nav class="navbar px-10 py-4 bg-transparent max-w-7xl mx-auto">
+        <div class="flex-1">
+            <a class="text-xs font-bold tracking-[0.4em] uppercase orange-text">✦ Keiza Studio ✦</a>
         </div>
-        <p class="text-xs italic opacity-60 text-right max-w-[200px]">A little piece of Keiza's favorite boosters.</p>
+        <div class="flex-none">
+            <ul class="menu menu-horizontal px-1 text-[10px] font-bold uppercase tracking-widest gap-6">
+                <li><a href="index.html" class="hover:bg-orange-50 rounded-full transition-all">Home</a></li>
+                <li><a href="faves.html" class="border-b-2 border-[#E67E5E] rounded-none orange-text">My Faves</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="max-w-6xl mx-auto mt-6 mb-10 flex flex-col md:flex-row justify-between items-end gap-6 px-10">
+        <div>
+            <a href="index.html" class="font-bold text-[10px] uppercase tracking-widest opacity-60 hover:underline">&larr; Back Home</a>
+            <h2 class="font-serif text-6xl mt-4 uppercase tracking-tighter">
+                My <span class="text-[#E67E5E]">Daily Joy</span>
+            </h2>
+        </div>
+        <p class="text-[10px] italic opacity-60 text-right max-w-[200px]">
+            A little piece of Keiza's favorite boosters.
+        </p>
     </header>
 
-    <main class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+    <main class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-10">
         
         <div class="lonjong-card">
-            <div class="text-6xl mb-10 bg-[#F4D35E]/20 p-6 rounded-full">🍦</div>
-            <h4 class="uppercase text-[10px] font-bold tracking-[0.4em] mb-4 opacity-40">Sweet Reward</h4>
-            <h3 class="font-serif text-3xl mb-6 italic">Soft Serve</h3>
-            <p class="text-sm opacity-70 mb-12 leading-relaxed italic">The perfect escape for an Informatics student after long coding hours.</p>
-            <button class="btn-pill mt-auto shadow-md">Learn More</button>
+            <div class="icon-circle bg-[#F4D35E]/20">🍣</div>
+            <h4 class="uppercase text-[10px] font-bold tracking-widest opacity-40 mb-2">Top Favorite</h4>
+            <h3 class="font-serif text-3xl mb-4">Sushi</h3>
+            <p class="text-sm opacity-70 mb-10 leading-relaxed">Sushi is one of my favorite foods! I love raw salmon belly.</p>
+            <a href="https://www.instagram.com/gionsushi_id/" target="_blank" class="btn-pill">My Fav Place</a>
         </div>
 
         <div class="lonjong-card">
-            <div class="text-6xl mb-10 bg-[#E67E5E]/10 p-6 rounded-full">🍜</div>
-            <h4 class="uppercase text-[10px] font-bold tracking-[0.4em] mb-4 opacity-40">Spicy Fuel</h4>
-            <h3 class="font-serif text-3xl mb-6 italic">Spicy Noodle</h3>
-            <p class="text-sm opacity-70 mb-12 leading-relaxed italic">Essential fuel when Keiza is deep in UI/UX designing.</p>
-            <button class="btn-pill mt-auto shadow-md">Learn More</button>
+            <div class="icon-circle bg-[#E67E5E]/10">🥩</div>
+            <h4 class="uppercase text-[10px] font-bold tracking-widest opacity-40 mb-2">Fancy Fuel</h4>
+            <h3 class="font-serif text-3xl mb-4">Beef Steak</h3>
+            <p class="text-sm opacity-70 mb-10 leading-relaxed">Expensive but something that I would choose over and over.</p>
+            <a href="https://www.holycowsteak.com/" target="_blank" class="btn-pill">My Fav Place</a>
         </div>
 
-        <div class="lonjong-card border-dashed">
-            <div class="text-6xl mb-10 bg-blue-100/30 p-6 rounded-full">🍵</div>
-            <h4 class="uppercase text-[10px] font-bold tracking-[0.4em] mb-4 opacity-40">Calm Mind</h4>
-            <h3 class="font-serif text-3xl mb-6 italic">Matcha Latte</h3>
-            <p class="text-sm opacity-70 mb-12 leading-relaxed italic">Finding zen while studying data structures at FILKOM UB.</p>
-            <button class="btn-pill mt-auto shadow-md">Learn More</button>
+        <div class="lonjong-card">
+            <div class="icon-circle bg-blue-100/30">☕</div>
+            <h4 class="uppercase text-[10px] font-bold tracking-widest opacity-40 mb-2">Calm Mind</h4>
+            <h3 class="font-serif text-3xl mb-4">Coffee Latte</h3>
+            <p class="text-sm opacity-70 mb-10 leading-relaxed">A fuel for an all-night coding session at FILKOM UB.</p>
+            <a href="https://www.instagram.com/tokokopijaya/" target="_blank" class="btn-pill">My Fav Place</a>
         </div>
 
     </main>
 
-    <footer class="mt-40 text-center border-t border-[#2D2424]/10 pt-16">
+    <footer class="mt-24 text-center border-t border-[#2D2424]/10 pt-10 pb-10">
         <p class="text-[10px] font-bold uppercase tracking-[0.5em] opacity-30">
             Micheline Keiza Andrea Pangemanan &copy; 2026
         </p>
     </footer>
 
 </body>
+
 </html>
